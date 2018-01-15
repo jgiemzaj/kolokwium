@@ -30,21 +30,6 @@ public class DoradcaLekow2 extends DoradcaLekow {
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
-        OnClickPlace listener = (view, position) -> {
 
-            String nazwa = leki.get(position).getNazwa();
-            String dawka = leki.get(position).getDawka();
-
-            Intent intent = new Intent(getApplicationContext(), DoradcaLekow.class);
-            Bundle bundle = new Bundle();
-            bundle.putString("nazwa", nazwa);
-            bundle.putString("dawka", dawka);
-
-            intent.putExtras(bundle);
-            startActivity(intent);
-        };
-
-        LekAdapter placeAdapter = new LekAdapter(leki,listener);
-        recyclerView.setAdapter(LekAdapter);
     }
 }
