@@ -18,7 +18,7 @@ public class DoradcaLekow extends Activity {
     @BindView(R.id.button_wybierz)
     Button wybierz;
 
-    @BindView(R.id.text_wpisz_pesel)
+    @BindView(R.id.wpisz_pesel)
     EditText wpiszTekst;
 
     @BindView(R.id.text_prosba)
@@ -35,8 +35,8 @@ public class DoradcaLekow extends Activity {
     public void onClick(View v) {
         Intent intent = new Intent(DoradcaLekow.this, com.example.student.doradcalekow.DoradcaLekow2.class);
         Bundle bundle = new Bundle();
-        String enteredText = wpiszTekst.getText().toString();
-        bundle.putString("Key", enteredText);
+
+
         intent.putExtras(bundle);
         startActivity(intent);
     }
